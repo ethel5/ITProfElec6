@@ -1,0 +1,17 @@
+# Node
+node_modules/
+dist/
+
+# Laravel
+inventory-backend/vendor/
+inventory-backend/.env
+
+# SQLite database
+inventory-backend/inventory_db
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
