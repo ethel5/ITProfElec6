@@ -67,7 +67,7 @@
   ])
 
   const author = ref({
-    books: [],
+    books: [] as { id: number; title: string }[],
   })
 
   const x = ref(0)

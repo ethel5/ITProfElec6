@@ -12,6 +12,11 @@ inventory-backend/inventory_db
 # Logs
 *.log
 
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
 # OS
 .DS_Store
 Thumbs.db

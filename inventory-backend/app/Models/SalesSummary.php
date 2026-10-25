@@ -15,8 +15,8 @@ class SalesSummary extends Model
         'employee_id',
     ];
 
-    public function salesSummary() {
-        return $this->belongsTo(SalesSummary::class, 'customer_id');
+    public function customer() {
+        return $this->belongsTo(Customer::class, 'customer_id');
     }
 
     public function employee() {

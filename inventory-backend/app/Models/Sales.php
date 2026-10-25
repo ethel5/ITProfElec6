@@ -9,6 +9,7 @@ class Sales extends Model
 {
     use HasUuids;
     protected $fillable = [
+        'sales_summary_id',
         'customer_id',
         'item_id',
         'price',
@@ -16,8 +17,12 @@ class Sales extends Model
         'quantity',
     ];
 
+    public function salesSummary(){
+        return $this->belongsTo(SalesSummary::class, 'sales_summary_id');
+    }
+
     public function salesSummaries(){
-        return $this->belongsTo(SalesSummary::class, 'sales_id');
+        return $this->salesSummary();
     }
 
     public function customer(){
