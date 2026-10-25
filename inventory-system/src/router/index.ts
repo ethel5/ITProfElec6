@@ -19,16 +19,16 @@ const router = createRouter({
       component: DefaultLayout,
       children: [
         {
-          path: "/dashboard",
+          path: "dashboard",
           name: "Dashboard",
           component: Dashboard,
         },
         {
-          path: "/form",
+          path: "form",
           name: "Form",
           component: Form,
-        ],
         },
+      ],
     },
   ],
 });

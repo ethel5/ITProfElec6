@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('middle_name', 45)->nullable();
             $table->string('position');
             $table->date('birthdate');
-            $table->string('age');
+            $table->integer('age')->unsigned();
             $table->string('civil_status', 15);
             $table->string('gender', 10);
             $table->timestamps();
