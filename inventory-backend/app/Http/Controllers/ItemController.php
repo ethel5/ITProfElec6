@@ -17,5 +17,23 @@ class ItemController extends Controller
         return response()->json($item, 201);
     }
 
+    public function update(Request $request) {
+        $item = Item::where('id', $request->id)->update([
+            'name'=> $request->name,
+            'brand'=> $request->brand,
+            'price'=> $request->price
+        ]);
+        return Item::find($request->id);
+    }
+
+    public function destroy(Request $request) {
+        $item = Item::where('id', $request->id)->delete();
+        return response()->json(['message' => 'Item deleted successfully']);
+    }
+
+    public function all() {
+        return Item::all();
+    }
+
     
 }
